@@ -68,7 +68,7 @@ body {
 
 .video-overlay-play { position: absolute; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: orange; padding: 4px 10px; border-radius: 5px; font-size: 12px; pointer-events: none; }
 
-/* --- THEMA KNOP (Zorg dat deze in je HTML staat) --- */
+
 .theme-btn { 
     background: transparent; 
     border: 2px solid orange; 
