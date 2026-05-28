@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
     
-    // Controleer direct bij het laden of er een opgeslagen modus is
     if (currentTheme === 'light') {
         document.body.classList.add('light-mode');
         if(themeToggle) themeToggle.textContent = '🌙 Dark';
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(themeToggle) themeToggle.textContent = '☀️ Light';
     }
 
-    // Luister naar de klik op de knop om te switchen
     if(themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
