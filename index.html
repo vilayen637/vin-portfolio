@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">MyPortfolio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn">☀️ Light</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-left">
+            <h1>
+                Hello, I'm <br>
+                <span>Ghoerahoe Vilayen</span>
+            </h1>
+            <br>
+            <p>
+                I am a 19-year-old ICT student at UNASAT currently studying Software Engineering.
+                I am passionate about technology, web development, and learning new digital skills.
+                I enjoy building websites and exploring both software and networking concepts.
+            </p>
+            <br>
+            <p>
+                I have basic experience with HTML, CSS, and JavaScript, and I am currently
+                working on improving my programming and problem-solving skills through projects.
+            </p>
+        </div>
+
+        <div class="hero-right">
+            <div class="shape"></div>
+
+            <div class="profile-wrapper">
+                <div class="profile-container">
+                    <img src="img/image.jpg" alt="Profile Picture">
+                </div>
+                <button id="messageBtn" class="click-btn">Click Me!</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Hello! 👋</h2>
+            <p>Thank you so much for visiting my digital portfolio.</p>
+            <p>I am excited to share my Software Engineering journey, projects, skills and much more with you!</p>
+            <br>
+            <button id="modalCloseBtn" class="modal-action-btn">Welcome! (Click to continue)</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

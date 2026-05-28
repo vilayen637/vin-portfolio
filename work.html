@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Work</title>
+    <link rel="stylesheet" href="css/work.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">MyPortfolio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn">☀️ Light</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="work-section">
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="work-card">
+            <div class="card-text">
+                <h3>Payment Service Employee - Betaalgemak</h3>
+                <p>I assist customers with paying utility bills such as electricity, water, and internet services. I also help customers with vehicle insurance services and product sales within the store.</p>
+            </div>
+            <div class="card-media">
+                <img src="img/betaalgemak.jpg" class="trigger-media" alt="Betaalgemak Services">
+            </div>
+        </div>
+
+        <div class="work-card">
+            <div class="card-text">
+                <h3>Barber</h3>
+                <p>I also have barbering experience and a barber diploma, allowing me to provide haircut services to customers.</p>
+            </div>
+            <div class="card-media">
+                <img src="img/barber.jpg" class="trigger-media" alt="Barber Certificaat">
+            </div>
+        </div>
+    </section>
+
+    <section class="work-section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="work-card">
+            <div class="card-text">
+                <h3>Mini Solar System Generator</h3>
+                <p>A project built using an ESP32 microcontroller to simulate and control a mini solar system setup. Technologies Used: ESP32, electronics, hardware components, and programming concepts.</p>
+            </div>
+            <div class="card-media">
+                <video src="video.mp4" class="trigger-media" muted loop></video>
+                <div class="video-overlay-play">▶ Play Video</div>
+            </div>
+        </div>
+
+        <div class="work-card central-card">
+            <div class="card-text">
+                <h3>Personal Portfolio Website</h3>
+                <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my skills, projects, and experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="mediaModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content-wrapper">
+            <div id="modalTarget"></div>
+        </div>
+    </div>
+
+    <script src="js/work.js"></script>
+</body>
+</html>

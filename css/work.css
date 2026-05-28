@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b111e;
+    color: white;
+    line-height: 1.6;
+    padding-bottom: 80px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #0f172a;
+    transition: background 0.3s ease;
+}
+
+.logo { color: orange; font-size: 30px; font-weight: 700; }
+.nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+.nav-links a { text-decoration: none; color: white; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: orange; }
+
+/* --- SECTIONS & TITLES --- */
+.work-section {
+    max-width: 1100px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: orange;
+    margin-bottom: 30px;
+}
+
+/* --- CARDS --- */
+.work-card {
+    display: flex;
+    background: #151f32;
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+.central-card { text-align: center; justify-content: center; }
+.card-text { flex: 1; }
+.card-text h3 { color: orange; font-size: 22px; margin-bottom: 15px; }
+.card-text p { color: #cbd5e1; font-size: 15px; transition: color 0.3s ease; }
+
+.card-media { position: relative; width: 320px; height: 190px; border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
+.card-media img, .card-media video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.card-media:hover img, .card-media:hover video { transform: scale(1.05); }
+
+.video-overlay-play { position: absolute; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: orange; padding: 4px 10px; border-radius: 5px; font-size: 12px; pointer-events: none; }
+
+/* --- THEMA KNOP (Zorg dat deze in je HTML staat) --- */
+.theme-btn { 
+    background: transparent; 
+    border: 2px solid orange; 
+    color: orange; 
+    padding: 6px 14px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-weight: 600;
+}
+.theme-btn:hover { background: orange; color: white; }
+
+/* --- LIGHT MODE (OVERSCHRIJVINGEN) --- */
+body.light-mode { background: #f1f5f9; color: #1e293b; }
+body.light-mode .navbar { background: #ffffff; }
+body.light-mode .nav-links a { color: #1e293b; }
+body.light-mode .work-card { background: #ffffff; border: 1px solid #e2e8f0; }
+body.light-mode .card-text p { color: #475569; }
+
+/* --- MODAL --- */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(7, 11, 20, 0.95); justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+.modal.show { display: flex; opacity: 1; }
+.modal-content-wrapper { max-width: 80%; max-height: 80vh; display: flex; justify-content: center; align-items: center; }
+.modal-content-wrapper img, .modal-content-wrapper video { max-width: 100%; max-height: 80vh; border-radius: 12px; border: 2px solid rgba(255, 165, 0, 0.3); animation: zoomIn 0.3s ease; }
+.close-modal { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 40px; cursor: pointer; }
+.close-modal:hover { color: orange; }
+
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@media (max-width: 850px) { .work-card { flex-direction: column; text-align: center; } .card-media { width: 100%; height: 220px; } }

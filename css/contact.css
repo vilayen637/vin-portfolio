@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+
+    background:#0b111e;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    transition:0.3s;
+}
+
+/* CURSOR GLOW */
+
+.cursor-glow{
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    background:radial-gradient(circle,
+    rgba(255,165,0,0.18) 0%,
+    rgba(255,165,0,0) 70%);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(15,23,42,0.85);
+
+    backdrop-filter:blur(10px);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+}
+
+.logo{
+    color:orange;
+
+    font-size:35px;
+
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+
+    color:white;
+
+    transition:0.3s;
+
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:orange;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    min-height:100vh;
+
+    padding:80px 8%;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.section-title{
+    text-align:center;
+
+    font-size:65px;
+
+    color:orange;
+
+    margin-top:30px;
+
+    margin-bottom:20px;
+}
+
+.subtitle{
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+}
+
+/* CONTACT CONTAINER */
+
+.contact-container{
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+/* CARD */
+.contact-card { 
+    position: relative;
+    overflow: hidden;
+
+    background: #151f32; 
+    padding: 30px; 
+    border-radius: 16px; 
+    text-align: center; 
+    text-decoration: none; 
+    color: white; 
+    flex: 1;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    transition: 
+        transform 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+.contact-card:hover { 
+    transform: translateY(-10px); 
+    background: #1e293b;
+
+    box-shadow:
+        0 0 20px rgba(255, 170, 0, 0.2),
+        0 0 50px rgba(255, 170, 0, 0.1);
+}
+
+.contact-card h3 { 
+    color: orange; 
+    margin-bottom: 10px; 
+    font-size: 28px;
+}
+
+.contact-card p { 
+    color: #e2e8f0; 
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* GLOW EFFECT */
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(circle, rgba(255,170,0,0.35), transparent 70%);
+
+    top: var(--y);
+    left: var(--x);
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+
+    pointer-events: none;
+}
+
+.contact-card:hover::before {
+    opacity: 1;
+}
+
+/* HOVER */
+
+.contact-card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    border-color:orange;
+
+    box-shadow:
+    0 0 20px rgba(255,165,0,0.3),
+    0 0 40px rgba(255,165,0,0.2);
+}
+
+/* ICON */
+
+.icon-box{
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,165,0,0.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:35px;
+
+    color:orange;
+}
+
+/* TEXT */
+
+.contact-card h3{
+    font-size:35px;
+
+    color:orange;
+
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    color:white;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+    word-break:break-word;
+}
+
+.contact-card span{
+    color:#cbd5e1;
+
+    font-size:15px;
+}
+
+/* THEME BUTTON */
+
+.theme-btn{
+    background:transparent;
+
+    border:2px solid orange;
+
+    color:orange;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.theme-btn:hover{
+    background:orange;
+
+    color:black;
+}
+
+/* LIGHT MODE */
+
+body.light-mode{
+    background:#f1f5f9;
+
+    color:#0f172a;
+}
+
+body.light-mode .navbar{
+    background:rgba(255,255,255,0.8);
+}
+
+body.light-mode .nav-links a{
+    color:#0f172a;
+}
+
+body.light-mode .contact-card{
+    background:white;
+
+    color:#0f172a;
+}
+
+body.light-mode .contact-card p{
+    color:#0f172a;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .section-title{
+        font-size:45px;
+    }
+
+    .contact-card{
+        width:100%;
+    }
+
+    .navbar{
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+}
